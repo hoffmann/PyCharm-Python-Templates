@@ -107,7 +107,7 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="main" value="def main(argv):&#10;    if argv is None:&#10;        argv = sys.argv&#10;    $END$&#10;&#10;if __name__ == &quot;__main__&quot;:&#10;    main()" description="if __name__ = &quot;__main__&quot;:" toReformat="false" toShortenFQNames="true">
+  <template name="main" value="def main(argv):&#10;    if argv is None:&#10;        argv = sys.argv&#10;    $END$&#10;&#10;if __name__ == &quot;__main__&quot;:&#10;    main()" description="if __name__ == &quot;__main__&quot;:" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
