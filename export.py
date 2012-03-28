@@ -19,7 +19,7 @@ def main(argv=None):
     if argv is None:
         argv = sys.argv
     
-    user_xml_file = os.path.expanduser('~/.PyCharm10/config/templates/user.xml')
+    user_xml_file = os.path.expanduser('~/.PyCharm20/config/templates/user.xml')
     if len(argv) == 2:
         user_xml_file = argv[1]
 
