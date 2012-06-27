@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="user">
-  <template name="class" value="class $class$($object$):&#10;    &quot;&quot;&quot;$cls_doc$&quot;&quot;&quot;&#10;    &#10;    def __init__(self, $args$):&#10;        &quot;&quot;&quot;Constructor for $class$&quot;&quot;&quot;&#10;        $END$&#10;    &#10;" description="Python Class Template" toReformat="false" toShortenFQNames="true">
+  <template name="class" value="class $class$($object$):&#10;    &quot;&quot;&quot;&#10;    $cls_doc$&#10;    &quot;&quot;&quot;&#10;    &#10;    def __init__(self, $args$):&#10;        &quot;&quot;&quot; &#10;            参数:   $args$       &#10;        &quot;&quot;&quot;    &#10;        $END$&#10;    &#10;" description="Python Class Template" toReformat="false" toShortenFQNames="true">
     <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="object" expression="" defaultValue="object" alwaysStopAt="true" />
     <variable name="cls_doc" expression="" defaultValue="" alwaysStopAt="true" />
@@ -15,11 +15,12 @@
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="OTHER" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
     </context>
   </template>
-  <template name="init" value="def __init__(self, $args$):&#10;    &quot;&quot;&quot;$doc$&quot;&quot;&quot;&#10;    $END$&#10;    " description="init function" toReformat="false" toShortenFQNames="true">
+  <template name="init" value="def __init__(self, $args$):&#10;    &quot;&quot;&quot; &#10;        参数:   $args$       &#10;    &quot;&quot;&quot;    &#10;    $END$&#10;    &#10;    " description="init function" toReformat="false" toShortenFQNames="true">
     <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="doc" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
@@ -30,9 +31,11 @@
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="OTHER" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
     </context>
   </template>
-  <template name="def" value="def $fnname$($args$):&#10;    &quot;&quot;&quot;$docstring$&#10;    &#10;    Args:&#10;        $args$&#10;       &#10;    Returns:&#10;        $return_value$&#10;    &quot;&quot;&quot;&#10;    $END$" description="function definition" toReformat="false" toShortenFQNames="true">
+  <template name="def" value="def $fnname$($args$):&#10;    &quot;&quot;&quot;&#10;        $docstring$    &#10;        参数:   $args$       &#10;        返回值:    $return_value$&#10;    &quot;&quot;&quot;    &#10;    $END$" description="function definition" toReformat="false" toShortenFQNames="true">
     <variable name="fnname" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="docstring" expression="" defaultValue="" alwaysStopAt="true" />
@@ -47,6 +50,8 @@
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="OTHER" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
     </context>
   </template>
   <template name="se" value="self.$var$ = $var$&#10;$END$" description="set instance variable" toReformat="false" toShortenFQNames="true">
@@ -61,6 +66,8 @@
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="OTHER" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
     </context>
   </template>
   <template name="from" value="from $module$ import $name$&#10;$END$" description="from module import name" toReformat="false" toShortenFQNames="true">
@@ -76,6 +83,8 @@
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="OTHER" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
     </context>
   </template>
   <template name="pf" value="print &quot;$string$&quot;.format($args$)&#10;$END$" description="print formatted string" toReformat="false" toShortenFQNames="true">
@@ -91,6 +100,8 @@
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="OTHER" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
     </context>
   </template>
   <template name="prop" value="$property$ = property(get_$property$, set_$property$)&#10;$END$" description="property" toReformat="false" toShortenFQNames="true">
@@ -105,9 +116,11 @@
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="OTHER" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
     </context>
   </template>
-  <template name="main" value="def main(argv):&#10;    if argv is None:&#10;        argv = sys.argv&#10;    $END$&#10;&#10;if __name__ == &quot;__main__&quot;:&#10;    main()" description="if __name__ == &quot;__main__&quot;:" toReformat="false" toShortenFQNames="true">
+  <template name="main" value="def main(argv=None):&#10;    from sys import argv&#10;    if argv is None:&#10;        argv = argv&#10;    $END$&#10;&#10;if __name__ == &quot;__main__&quot;:&#10;    main()" description="if __name__ == &quot;__main__&quot;:" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
@@ -118,7 +131,57 @@
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="OTHER" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
+    </context>
+  </template>
+  <template name="test" value="def test_$fnname$(self, $args$):&#10;    &quot;&quot;&quot; &#10;        参数:   $args$       &#10;    &quot;&quot;&quot;    &#10;    $END$&#10;    " description="utest function definition" toReformat="false" toShortenFQNames="true">
+    <variable name="fnname" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="Python" value="true" />
+      <option name="Django" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
+    </context>
+  </template>
+  <template name="&quot;&quot;" value="&quot;$string$&quot;.format($args$)$END$" description="formatted string" toReformat="false" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="Python" value="true" />
+      <option name="Django" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
+    </context>
+  </template>
+  <template name="pdb" value="import pdb; pdb.set_trace()$END$" description="import pdb" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="Python" value="true" />
+      <option name="Django" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
     </context>
   </template>
 </templateSet>
-
