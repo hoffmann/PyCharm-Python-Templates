@@ -34,4 +34,4 @@ more information.
 
 ## How to use
 
-Now you should be able to type "fnp<TAB>", meaning you type the letters "fnp" and then press the button <TAB> and it will fill the live template, in this case with the numpy docstring template for a function.
+Now you should be able to type "fnp`<TAB>`", meaning you type the letters "fnp" and then press the button `<TAB>` and it will fill the live template, in this case with the numpy docstring template for a function.
