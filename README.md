@@ -12,6 +12,17 @@ Live templates are stored in the following location:
 	Windows: <your home directory>\.<productname><versionnumber>\config\templates
 	Linux: ~\.<product name><version number>\config\templates
 	MacOS: ~/Library/Preferences/<product name><version number>/templates
+	
+## Example
+
+MacOS, PyCharm 3
+
+```
+git clone git@github.com/YeoLab/PyCharm-Python-Templates
+cp PyCharm-Python-Templates/user.xml ~/Library/Preferences/PyCharm30/templates/
+```
+
+You could also copy/paste the template XML to the `Python.xml` file but that's more work.
 
 If you have not defined any user templates yet, you can copy the user.xml to
 the templates location, otherwise you have to merge the files or add the
@@ -19,3 +30,6 @@ templates by hand.
 
 See http://peter-hoffmann.com/2010/python-live-templates-for-pycharm.html for 
 more information.
+
+
+
