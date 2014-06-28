@@ -16,6 +16,7 @@
       <option name="JAVA_SCRIPT" value="false" />
       <option name="OTHER" value="false" />
       <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
     </context>
   </template>
   <template name="init" value="def __init__(self, $args$):&#10;    &quot;&quot;&quot;$doc$&quot;&quot;&quot;&#10;    $END$&#10;    " description="init function" toReformat="false" toShortenFQNames="true">
@@ -32,6 +33,7 @@
       <option name="JAVA_SCRIPT" value="false" />
       <option name="OTHER" value="false" />
       <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
     </context>
   </template>
   <template name="def" value="def $fnname$($args$):&#10;    &quot;&quot;&quot;$docstring$&#10;    &#10;    Args:&#10;        $args$&#10;       &#10;    Returns:&#10;        $return_value$&#10;    &quot;&quot;&quot;&#10;    $END$" description="function definition" toReformat="false" toShortenFQNames="true">
@@ -50,6 +52,7 @@
       <option name="JAVA_SCRIPT" value="false" />
       <option name="OTHER" value="false" />
       <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
     </context>
   </template>
   <template name="se" value="self.$var$ = $var$&#10;$END$" description="set instance variable" toReformat="false" toShortenFQNames="true">
@@ -65,6 +68,7 @@
       <option name="JAVA_SCRIPT" value="false" />
       <option name="OTHER" value="false" />
       <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
     </context>
   </template>
   <template name="from" value="from $module$ import $name$&#10;$END$" description="from module import name" toReformat="false" toShortenFQNames="true">
@@ -81,6 +85,7 @@
       <option name="JAVA_SCRIPT" value="false" />
       <option name="OTHER" value="false" />
       <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
     </context>
   </template>
   <template name="pf" value="print &quot;$string$&quot;.format($args$)&#10;$END$" description="print formatted string" toReformat="false" toShortenFQNames="true">
@@ -97,6 +102,7 @@
       <option name="JAVA_SCRIPT" value="false" />
       <option name="OTHER" value="false" />
       <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
     </context>
   </template>
   <template name="prop" value="$property$ = property(get_$property$, set_$property$)&#10;$END$" description="property" toReformat="false" toShortenFQNames="true">
@@ -112,6 +118,7 @@
       <option name="JAVA_SCRIPT" value="false" />
       <option name="OTHER" value="false" />
       <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
     </context>
   </template>
   <template name="main" value="def main(argv):&#10;    if argv is None:&#10;        argv = sys.argv&#10;    $END$&#10;&#10;if __name__ == &quot;__main__&quot;:&#10;    main()" description="if __name__ == &quot;__main__&quot;:" toReformat="false" toShortenFQNames="true">
@@ -124,8 +131,9 @@
       <option name="Django" value="false" />
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
-      <option name="OTHER" value="false" />
       <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
     <template name="fnpdoc" value="Parameters&#10;----------&#10;&#10;&#10;Returns&#10;-------&#10;&#10;&#10;Raises&#10;------" description="Inserts Numpydoc params/returns for a function" toReformat="false" toShortenFQNames="true">
@@ -139,6 +147,7 @@
       <option name="CoffeeScript" value="false" />
       <option name="HAML" value="false" />
       <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
       <option name="OTHER" value="false" />
     </context>
   </template>
@@ -205,6 +214,25 @@
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="SQL" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="defm" value="def $fnname$(self, $args$):&#10;    &quot;&quot;&quot;$docstring$&#10;    &#10;    Args:&#10;        $args$&#10;       &#10;    Returns:&#10;        $return_value$&#10;    &quot;&quot;&quot;&#10;    $END$" description="method definition" toReformat="false" toShortenFQNames="true">
+    <variable name="fnname" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="docstring" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="return_value" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="Python" value="true" />
+      <option name="Django" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
       <option name="OTHER" value="false" />
     </context>
   </template>
@@ -302,10 +330,11 @@
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="utf" value="# -*- coding:utf-8 -*-&#10;$END$" description="utf8 header" toReformat="false" toShortenFQNames="true">
+  <template name="enc" value="# -*- coding: utf-8 -*-&#10;$END$" description="encoding header" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
@@ -316,6 +345,7 @@
       <option name="CSS" value="false" />
       <option name="JAVA_SCRIPT" value="false" />
       <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
       <option name="OTHER" value="false" />
     </context>
   </template>
