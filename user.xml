@@ -351,4 +351,53 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
+  <template name="test" value="def test_$fnname$(self, $args$):&#10;    &quot;&quot;&quot; &#10;        Args:   $args$       &#10;    &quot;&quot;&quot;    &#10;    $END$&#10;    " description="utest function definition" toReformat="false" toShortenFQNames="true">
+    <variable name="fnname" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="Python" value="true" />
+      <option name="Django" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
+    </context>
+  </template>
+  <template name="&quot;&quot;" value="&quot;$string$&quot;.format($args$)$END$" description="formatted string" toReformat="false" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="Python" value="true" />
+      <option name="Django" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
+    </context>
+  </template>
+  <template name="pdb" value="import pdb; pdb.set_trace()$END$" description="import pdb" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="Python" value="true" />
+      <option name="Django" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
+    </context>
+  </template>
 </templateSet>
