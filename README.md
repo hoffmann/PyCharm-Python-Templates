@@ -18,7 +18,7 @@ Live templates are stored in the following location:
 MacOS, PyCharm 3
 
 ```
-git clone git@github.com/YeoLab/PyCharm-Python-Templates
+git clone git@github.com:hoffmann/PyCharm-Python-Templates.git
 cp PyCharm-Python-Templates/user.xml ~/Library/Preferences/PyCharm30/templates/
 ```
 
