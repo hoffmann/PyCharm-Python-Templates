@@ -1,7 +1,25 @@
 <templateSet group="user">
-  <template name="class" value="class $class$($object$):&#10;    &quot;&quot;&quot;$cls_doc$&quot;&quot;&quot;&#10;    &#10;    def __init__(self, $args$):&#10;        &quot;&quot;&quot;Constructor for $class$&quot;&quot;&quot;&#10;        $END$&#10;    &#10;" description="Python Class Template" toReformat="false" toShortenFQNames="true">
+  <template name="class" value="class $class$($object$):&#10;    &#10;    def __init__(self, $args$):&#10;        $END$&#10;    &#10;" description="Python Class Template" toReformat="false" toShortenFQNames="true">
     <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="object" expression="" defaultValue="object" alwaysStopAt="true" />
+    <variable name="object" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="Python" value="true" />
+      <option name="Django" value="false" />
+      <option name="CSS" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="OTHER" value="false" />
+      <option name="SQL" value="false" />
+      <option name="HAML" value="false" />
+    </context>
+  </template>
+  <template name="classd" value="class $class$($object$):&#10;    &quot;&quot;&quot;$cls_doc$&quot;&quot;&quot;&#10;    &#10;    def __init__(self, $args$):&#10;        &quot;&quot;&quot;Constructor for $class$&quot;&quot;&quot;&#10;        $END$&#10;    &#10;" description="Python Class Template" toReformat="false" toShortenFQNames="true">
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="object" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
     <variable name="cls_doc" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
